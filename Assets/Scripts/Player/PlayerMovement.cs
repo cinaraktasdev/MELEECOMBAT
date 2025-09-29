@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Movement
-        float inputX = Input.GetAxis("Horizontal");
+        float inputX = Input.GetAxis("Horizontal");      //bu hareketlenmenin saldiri sirasinda olmasini istemiyorum ... onu da yaz bir ara
         float inputY = Input.GetAxis("Vertical");
         rb.velocity = new Vector2(inputX * speed, inputY * speed);
 
@@ -41,9 +41,6 @@ public class PlayerMovement : MonoBehaviour
 
         Dash();
 
-
-
-
     }
 
     private void Dash()
@@ -53,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dashing());
             dashCounter++;
+
         }
 
         
